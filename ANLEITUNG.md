@@ -114,6 +114,16 @@ Die Tabelle gehört dir, du kannst sie frei erweitern:
 
 Falsch eingetragene Spiele korrigierst oder löschst du direkt in der Tabelle.
 
+### Neue Auswertungen aus der Vorlage übernehmen
+Wird die Vorlage verbessert (z. B. ein neues Diagramm oder ein überarbeitetes Blatt „Statistik“), kannst du einzelne Blätter in deine Tabelle holen. Deine Spiele bleiben dabei unberührt:
+1. Den Vorlagen-Link öffnen, **nicht** kopieren.
+2. Unten mit Rechtsklick auf den Reiter des gewünschten Blatts, z. B. „Statistik“, dann **Kopieren nach → Vorhandene Tabelle** wählen und deine Tabelle aussuchen.
+3. In deiner Tabelle erscheint „Kopie von Statistik“. Dein altes Blatt „Statistik“ löschen oder umbenennen und die Kopie in **„Statistik“** umbenennen.
+
+Die Formeln greifen über die Blattnamen auf deine Spiele zu und rechnen sofort mit deinen Daten. Hast du ein Blatt selbst angepasst, übernimm deine Änderungen vorher, denn das neue Blatt ersetzt das alte komplett.
+
+**App-Updates** kommen automatisch. **Script-Updates** (selten) kommen nicht automatisch in deine Kopie. Falls einmal nötig, steht hier, was zu tun ist.
+
 ---
 
 ## Sicherheit

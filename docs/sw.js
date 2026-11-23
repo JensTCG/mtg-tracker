@@ -1,6 +1,6 @@
 // Service Worker: App-Dateien offline verfügbar machen.
 // Erst Netz (damit Updates sofort ankommen), nach 4 s oder offline aus dem Cache.
-const CACHE = 'podboard-v2';
+const CACHE = 'podboard-v3';
 const DATEIEN = ['./', 'index.html', 'app.js', 'style.css', 'manifest.json', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', e => {

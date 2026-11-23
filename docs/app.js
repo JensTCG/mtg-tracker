@@ -2,11 +2,10 @@
 // Podboard – App. Enthält absichtlich keine Tabellen-ID, Script-Adresse oder Schlüssel:
 // beides wird im Einrichtungsbildschirm eingegeben und nur auf diesem Gerät gespeichert.
 
-// Bei jeder neuen Version: VERSION erhöhen und oben in NEUIGKEITEN eintragen (CACHE in sw.js auch erhöhen).
-const VERSION = '1.2';
-const NEUIGKEITEN = {
-  '1.1': ['Deine Decks stehen jetzt alphabetisch.', 'Die Commander-Liste ergänzt sich jeden Montag automatisch mit neuen Sets.', 'Klarere Meldung, wenn ein Spiel noch auf den Sync wartet.'],
-};
+// Versionen: 1.0.1 = kleine Korrektur, 1.1 = neue Funktion. Bei jeder neuen Version VERSION erhöhen,
+// in NEUIGKEITEN kurz (für Laien) eintragen, was neu ist, und CACHE in sw.js hochzählen.
+const VERSION = '1.0';
+const NEUIGKEITEN = {};
 const $ = q => document.querySelector(q);
 const esc = t => String(t ?? '').replace(/[&<>"']/g, c => '&#' + c.charCodeAt(0) + ';');
 const URL_MUSTER = /^https:\/\/script\.google\.com\/(a\/[^/]+\/)?macros\/s\/[\w-]+\/exec$/;
@@ -216,6 +215,7 @@ function render() {
     main.innerHTML = `<h2>Einstellungen</h2>
       <p class="klein">Verbunden mit<br>…${esc(cfg.url.slice(-30))}</p>
       <p class="klein">${daten.decks.length} Decks, ${daten.commander.length} Commander geladen.</p>
+      <p class="klein">Podboard Version ${VERSION}</p>
       <div class="weiter">
         <button data-aktion="neu-laden">Decks &amp; Commander neu laden</button>
         <button class="gefahr" data-aktion="reset">Verbindung zurücksetzen</button>
