@@ -1,11 +1,22 @@
-# 🃏 Podboard
+# Podboard
 
 **Magic-Partien am Handy erfassen – Commander und Pauper – direkt in die eigene Google-Tabelle.**
 
-👉 **App öffnen:** https://jenstcg.github.io/podboard/
-
 Ein privates Hobbyprojekt: kostenlos, ohne Play Store, ohne Werbung, ohne Konto bei einem fremden Dienst.
 Jede Person nutzt die App mit **ihrer eigenen** Google-Tabelle – niemand sieht die Spiele der anderen.
+
+---
+
+## Selbst nutzen
+
+Du brauchst: ein Google-Konto, einen Computer für die Einrichtung und ein Android-Handy mit Chrome. Dauer: ca. 10 Minuten.
+Halte dich an diese Reihenfolge, denn die App funktioniert erst, wenn deine Tabelle fertig ist.
+
+1. **Vorlage kopieren:** [Hier klicken und „Kopie erstellen“ wählen](https://docs.google.com/spreadsheets/d/1dQ6jEafkvwyQY86VSG_QquwGIeghG_Ygh-FYP8b-ubA/copy). Die Tabelle liegt dann in deinem eigenen Google Drive und gehört nur dir.
+2. **Tabelle einrichten:** Decks eintragen, das Script freigeben und den QR-Code erzeugen. Wie das geht, steht Schritt für Schritt in der [Anleitung](ANLEITUNG.md#einrichten-einmalig-ca-10-minuten).
+3. **Handy verbinden:** den QR-Code mit dem Handy scannen. Er öffnet die App unter https://jenstcg.github.io/podboard/ und verbindet sie mit deiner Tabelle.
+
+Du musst niemanden fragen und dir nichts zuschicken lassen. Alles, was du brauchst, ist hier verlinkt.
 
 ---
 
@@ -22,22 +33,12 @@ Jede Person nutzt die App mit **ihrer eigenen** Google-Tabelle – niemand sieht
 
 | | |
 |---|---|
-| 📶 **Offline** | Spiele werden auf dem Handy gespeichert und automatisch gesendet, sobald wieder Internet da ist. |
-| 🔁 **Kein Doppeleintrag** | Jedes Spiel hat eine eigene Kennung – auch mehrfaches Senden erzeugt nur eine Zeile. |
-| 🧙 **Commander-Liste** | Alle Commander (von [Scryfall](https://scryfall.com)) – ergänzt sich jeden Montag automatisch mit neuen Sets. |
-| 🎨 **Farben** | Farbidentität der Gegner wird mitgespeichert, für Auswertungen „gegen Blau“, „gegen Dreifarbig“ … |
-| 📊 **Auswertung** | Passiert in der Google-Tabelle per Formeln – frei anpassbar. |
-| 📱 **Wie eine App** | In Chrome „Zum Startbildschirm hinzufügen“ – mit eigenem Symbol, ohne Browserleiste. |
-
-## Selbst nutzen – in 3 Schritten
-
-Du brauchst: ein Google-Konto, einen Computer für die Einrichtung und ein Android-Handy mit Chrome. Dauer: ca. 10 Minuten.
-
-1. 📄 **Vorlage kopieren:** **[Hier klicken → „Kopie erstellen“](https://docs.google.com/spreadsheets/d/1dQ6jEafkvwyQY86VSG_QquwGIeghG_Ygh-FYP8b-ubA/copy)**. Die Tabelle liegt dann in deinem eigenen Google Drive und gehört nur dir.
-2. 🔧 **Einrichten:** Decks eintragen, das Script freigeben und den QR-Code erzeugen. Wie das geht, steht Schritt für Schritt in der **[Anleitung](ANLEITUNG.md#einrichten-einmalig-ca-10-minuten)**.
-3. 📱 **Handy verbinden:** den QR-Code mit dem Handy scannen, fertig.
-
-Du musst niemanden fragen und nichts zuschicken lassen: Alles, was du brauchst, ist hier verlinkt.
+| **Offline** | Spiele werden auf dem Handy gespeichert und automatisch gesendet, sobald wieder Internet da ist. |
+| **Kein Doppeleintrag** | Jedes Spiel hat eine eigene Kennung – auch mehrfaches Senden erzeugt nur eine Zeile. |
+| **Commander-Liste** | Alle Commander (von [Scryfall](https://scryfall.com)) – ergänzt sich jeden Montag automatisch mit neuen Sets. |
+| **Farben** | Farbidentität der Gegner wird mitgespeichert, für Auswertungen „gegen Blau“, „gegen Dreifarbig“ … |
+| **Auswertung** | Passiert in der Google-Tabelle per Formeln – frei anpassbar. |
+| **Wie eine App** | In Chrome „Zum Startbildschirm hinzufügen“ – mit eigenem Symbol, ohne Browserleiste. |
 
 ## Sicherheit & Datenschutz
 
@@ -50,7 +51,7 @@ Du musst niemanden fragen und nichts zuschicken lassen: Alles, was du brauchst, 
 ## Wie die App entstanden ist
 
 Idee, Anforderungen und Tests stammen von mir – programmiert habe ich Podboard **mit KI-Unterstützung** (Claude von Anthropic).
-Jeder Schritt wurde einzeln getestet, und der komplette Code liegt hier offen zum Nachlesen.
+Jeder Schritt wurde einzeln getestet. Der komplette Code liegt hier offen zum Nachlesen.
 
 ## Technik (für Neugierige)
 

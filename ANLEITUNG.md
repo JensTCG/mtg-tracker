@@ -21,7 +21,7 @@ So läuft ein Spiel durch:
 3. Das Script prüft den Schlüssel und hängt das Spiel als neue Zeile an **deine Tabelle** an.
 4. Die Blätter **„Analysen“** und **„Statistik“** rechnen automatisch neu.
 
-Die App selbst speichert nichts auf einem fremden Server. Sie weiß nur, wo dein Script liegt, und das nur auf deinem Handy.
+Die App selbst speichert nichts auf einem fremden Server. Sie weiß nur, wo dein Script liegt. Das steht nur auf deinem Handy.
 
 ---
 
@@ -53,8 +53,8 @@ Im Blatt **„Meine Decks“** trägst du pro Deck eine Zeile ein:
 4. Einstellen:
    - *Ausführen als:* **Ich**
    - *Zugriff:* **Jeder**
-5. Auf **Bereitstellen** klicken, dann auf **Zugriff autorisieren**, und dein Google-Konto wählen.
-6. ⚠️ Google zeigt jetzt **„Google hat diese App nicht überprüft“**. Das ist normal: Das Script ist deine eigene Kopie und läuft nur in deinem Konto.
+5. Auf **Bereitstellen** klicken, dann auf **Zugriff autorisieren** und dein Google-Konto wählen.
+6. **Achtung:** Google zeigt jetzt **„Google hat diese App nicht überprüft“**. Das ist normal: Das Script ist deine eigene Kopie und läuft nur in deinem Konto.
    Klicke auf **„Erweitert“**, dann auf **„Zu Podboard wechseln (unsicher)“** und zum Schluss auf **„Zulassen“**.
 7. Es erscheint die **Web-App-URL**, sie endet auf `/exec`. Klicke auf **Kopieren**.
 
@@ -115,7 +115,7 @@ Die Tabelle gehört dir, du kannst sie frei erweitern:
 Falsch eingetragene Spiele korrigierst oder löschst du direkt in der Tabelle.
 
 ### Neue Auswertungen aus der Vorlage übernehmen
-Die Vorlage wird ab und zu verbessert, zum Beispiel durch ein neues Diagramm oder ein überarbeitetes Blatt „Statistik“. Du kannst einzelne Blätter in deine Tabelle holen, **ohne dass deine Spiele verloren gehen**. Deine Daten stehen nur in „Spiele Commander“, „Spiele Pauper“ und „Meine Decks“, und diese Blätter tauschst du nie aus.
+Die Vorlage wird ab und zu verbessert, zum Beispiel durch ein neues Diagramm oder ein überarbeitetes Blatt „Statistik“. Du kannst einzelne Blätter in deine Tabelle holen, **ohne dass deine Spiele verloren gehen**. Deine Daten stehen nur in „Spiele Commander“, „Spiele Pauper“ und „Meine Decks“. Diese Blätter tauschst du nie aus.
 
 **Woran du ein Update erkennst**
 - Podboard zeigt nach einem Update kurz „Neu in Version …“. Steht dort etwas zur Vorlage, lohnt sich ein Blick.
@@ -129,7 +129,7 @@ Die Vorlage wird ab und zu verbessert, zum Beispiel durch ein neues Diagramm ode
 
 Für „Analysen“ funktioniert es genauso.
 
-⚠️ Hast du ein Blatt selbst angepasst, ersetzt das neue Blatt deine Änderungen. Benenne dein altes Blatt in dem Fall lieber um (z. B. „Statistik alt“), statt es zu löschen, und übertrag deine Anpassungen danach.
+**Achtung:** Hast du ein Blatt selbst angepasst, ersetzt das neue Blatt deine Änderungen. Benenne dein altes Blatt in dem Fall lieber um (z. B. „Statistik alt“), statt es zu löschen. Übertrag deine Anpassungen danach.
 
 **Was sich von selbst aktualisiert:** die App (bei jedem Öffnen) und die Commander-Liste (jeden Montag).
 **Was du selbst holst:** neue oder verbesserte Auswertungsblätter, so wie oben beschrieben.
@@ -160,5 +160,5 @@ Für „Analysen“ funktioniert es genauso.
 | „Diese Script-Adresse liefert keine Daten“ | Die falsche Adresse wurde eingefügt. Im Einrichten-Fenster auf **„Script-Adresse ändern“** klicken und die Web-App-URL (endet auf `/exec`) neu einfügen. |
 | „Falscher Schlüssel“ | QR-Code neu scannen. |
 | Neues Handy | In der Tabelle *Podboard → Einrichten* öffnen und den QR-Code scannen. |
-| Andere Tabelle verbinden | In der App unter ⚙︎ → **Verbindung zurücksetzen**. Das geht erst, wenn alle Spiele gesendet sind. |
+| Andere Tabelle verbinden | In der App auf das **Zahnrad** oben rechts tippen, dann **Verbindung zurücksetzen**. Das geht erst, wenn alle Spiele gesendet sind. |
 | Ich habe das Script geändert | In Apps Script unter *Bereitstellen → Bereitstellungen verwalten* die Bereitstellung bearbeiten und bei *Version* „Neue Version“ wählen. Die Adresse bleibt dabei gleich. |

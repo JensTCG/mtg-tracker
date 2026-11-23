@@ -3,9 +3,11 @@
 // beides wird im Einrichtungsbildschirm eingegeben und nur auf diesem Gerät gespeichert.
 
 // Versionen: 1.0.1 = kleine Korrektur, 1.1 = neue Funktion. Bei jeder neuen Version VERSION erhöhen,
-// in NEUIGKEITEN kurz (für Laien) eintragen, was neu ist, und CACHE in sw.js hochzählen.
-const VERSION = '1.0';
-const NEUIGKEITEN = {};
+// in NEUIGKEITEN kurz (für Laien) eintragen, was neu ist. Danach CACHE in sw.js hochzählen.
+const VERSION = '1.0.1';
+const NEUIGKEITEN = {
+  '1.0.1': ['Kleine Textkorrektur auf dem Einrichtungsbildschirm.'],
+};
 const $ = q => document.querySelector(q);
 const esc = t => String(t ?? '').replace(/[&<>"']/g, c => '&#' + c.charCodeAt(0) + ';');
 const URL_MUSTER = /^https:\/\/script\.google\.com\/(a\/[^/]+\/)?macros\/s\/[\w-]+\/exec$/;
@@ -202,7 +204,7 @@ function render() {
   if (ansicht === 'setup') {
     $('#titel').textContent = 'Einrichten';
     main.innerHTML = `<h2>Mit deiner Tabelle verbinden</h2>
-      <p class="klein">Öffne deine Google-Tabelle, Menü „Podboard → Einrichten / Verbindung anzeigen“, und kopiere beide Werte hierher.</p>
+      <p class="klein">Öffne deine Google-Tabelle, Menü „Podboard → Einrichten / Verbindung anzeigen“ und kopiere beide Werte hierher.</p>
       <label>Script-Adresse<textarea id="s-url" rows="3" autocomplete="off">${esc(vorschlag.url)}</textarea></label>
       <label>Schlüssel<input id="s-key" value="${esc(vorschlag.key)}" autocomplete="off"></label>`;
     knoepfe.innerHTML = (cfg && daten ? '<button data-aktion="zum-spiel">Abbrechen</button>' : '')
