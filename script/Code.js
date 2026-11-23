@@ -1,8 +1,10 @@
 // Podboard – Backend an der Google-Tabelle.
 // Spiele kommen als {Spaltenüberschrift: Wert}; so ist die Spaltenreihenfolge egal und neue Spalten rechts funktionieren sofort.
+// Gelöschte Spalten sind erlaubt: Werte ohne passende Spalte werden einfach nicht gespeichert.
 
 const FORMATE = { Commander: 'Spiele Commander', Pauper: 'Spiele Pauper' };
-const PFLICHT_SPALTEN = ['Spiel-ID', 'Datum', 'Erfasst am', 'Sync-ID'];
+const PFLICHT_SPALTEN = ['Spiel-ID', 'Datum'];
+const GEMERKTE_SYNC_IDS = 200; // reicht für Wiederholungen nach Zeitlimit; ~8 KB, Google erlaubt 9 KB je Wert
 
 function onOpen() {
   SpreadsheetApp.getUi().createMenu('Podboard')
@@ -164,14 +166,15 @@ function doPost(e) {
     const kopf = blatt.getRange(1, 1, 1, blatt.getLastColumn()).getValues()[0].map(String);
     const fehlt = PFLICHT_SPALTEN.filter(k => !kopf.includes(k));
     if (fehlt.length) return json_({ ok: false, error: 'Spalten fehlen in der Tabelle: ' + fehlt.join(', ') });
-    const fremd = Object.keys(spiel).filter(k => !kopf.includes(k));
-    if (fremd.length) return json_({ ok: false, error: 'Unbekannte Spalten: ' + fremd.join(', ') });
 
     const n = blatt.getLastRow();
-    const spalte = k => n > 1 ? blatt.getRange(2, kopf.indexOf(k) + 1, n - 1).getValues().flat() : [];
+    const spalte = k => n > 1 && kopf.includes(k) ? blatt.getRange(2, kopf.indexOf(k) + 1, n - 1).getValues().flat() : [];
     const ids = spalte('Spiel-ID');
+    // Doppelschutz ohne Spalte: die letzten Sync-IDs merkt sich das Script selbst. Die Spalte zählt zusätzlich, falls es sie gibt.
+    const p = eigenschaften_();
+    const gemerkt = JSON.parse(p.getProperty('SYNC_IDS') || '[]');
     const schonDa = spalte('Sync-ID').indexOf(spiel['Sync-ID']);
-    if (schonDa >= 0) return json_({ ok: true, doppelt: true, id: ids[schonDa] });
+    if (schonDa >= 0 || gemerkt.includes(spiel['Sync-ID'])) return json_({ ok: true, doppelt: true, id: schonDa >= 0 ? ids[schonDa] : '' });
 
     const id = Math.max(0, ...ids.map(Number).filter(isFinite)) + 1;
     const erfasst = new Date(spiel['Erfasst am'] || Date.now());
@@ -183,7 +186,8 @@ function doPost(e) {
     const zeile = kopf.map(k => sicher_(werte[k]));
     blatt.getRange(n + 1, 1, 1, zeile.length).setValues([zeile]);
     blatt.getRange(n + 1, kopf.indexOf('Datum') + 1).setNumberFormat('d.m.yyyy');
-    blatt.getRange(n + 1, kopf.indexOf('Erfasst am') + 1).setNumberFormat('dd.mm.yyyy hh:mm');
+    if (kopf.includes('Erfasst am')) blatt.getRange(n + 1, kopf.indexOf('Erfasst am') + 1).setNumberFormat('dd.mm.yyyy hh:mm');
+    p.setProperty('SYNC_IDS', JSON.stringify(gemerkt.concat(spiel['Sync-ID']).slice(-GEMERKTE_SYNC_IDS)));
     return json_({ ok: true, doppelt: false, id: id });
   } finally {
     lock.releaseLock();

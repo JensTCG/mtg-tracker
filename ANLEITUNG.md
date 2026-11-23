@@ -104,6 +104,7 @@ Die Tabelle gehört dir, du kannst sie frei erweitern:
 - **Bitte so lassen**, sonst findet die App ihre Daten nicht mehr:
   - die Blattnamen **„Spiele Commander“**, **„Spiele Pauper“**, **„Meine Decks“** und **„CommanderDB“**,
   - die **Spaltenüberschriften** in diesen vier Blättern. Neue Spalten ganz rechts anhängen ist okay.
+- **Spalten löschen** geht in „Spiele Commander“ und „Spiele Pauper“ auch. Nur **„Spiel-ID“** und **„Datum“** müssen bleiben. Was die App für eine gelöschte Spalte erfasst, wird dann nicht gespeichert. Auswertungen, die diese Spalte brauchen, zeigen danach nichts mehr an.
 - Tipp: Vor größeren Umbauten über *Datei → Kopie erstellen* eine Sicherung anlegen. Über *Datei → Versionsverlauf* kommst du an ältere Stände zurück.
 
 Falsch eingetragene Spiele korrigierst oder löschst du direkt in der Tabelle.
