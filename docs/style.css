@@ -20,12 +20,15 @@ button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px
 .liste { display: grid; gap: 8px; }
 .liste .wahl { text-align: left; }
 .kacheln { display: grid; gap: 8px; margin-top: 8px; }
-.kacheln .wahl { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; hyphens: auto; overflow-wrap: anywhere; }
+/* Alles in cqi = Prozent der Kachelbreite: Rand (10 %) und Schrift (12 %) wachsen und schrumpfen gemeinsam mit der Kachel. */
+.kacheln .wahl { aspect-ratio: 1; container-type: inline-size; min-height: 0; padding: 0; display: flex; align-items: center; justify-content: center; text-align: center; }
+.kacheln .wahl span { padding: 10cqi; font-size: 12cqi; line-height: 1.2; overflow-wrap: anywhere; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; overflow: hidden; }
 .kacheln .wahl[hidden] { display: none; }
 .kacheln.gross { grid-template-columns: repeat(2, 1fr); }
-.kacheln.mittel { grid-template-columns: repeat(3, 1fr); font-size: 16px; }
-.kacheln.kompakt { grid-template-columns: repeat(3, 1fr); font-size: 15px; }
-.kacheln.kompakt .wahl { aspect-ratio: auto; min-height: 76px; }
+.kacheln.mittel { grid-template-columns: repeat(3, 1fr); }
+.kacheln.kompakt { grid-template-columns: repeat(3, 1fr); }
+.kacheln.kompakt .wahl { aspect-ratio: 3 / 2; }
+.kacheln.kompakt .wahl span { -webkit-line-clamp: 3; }
 .wahl.an { background: var(--akzent); border-color: var(--akzent); color: #fff; }
 label { display: block; margin: 14px 0 6px; color: var(--leise); font-size: 15px; }
 input, textarea { display: block; width: 100%; margin-top: 6px; font: inherit; color: var(--txt); background: var(--fl); border: 1px solid var(--rand); border-radius: 12px; padding: 14px; }

@@ -75,7 +75,7 @@ Fertig. Ab jetzt öffnest du Podboard über das Symbol auf dem Startbildschirm.
 
 ### Ein Spiel eintragen
 1. **Format:** Commander oder Pauper.
-2. **Mein Deck:** dein Deck antippen.
+2. **Mit welchem Deck?** Dein Deck antippen. Ab 10 Decks gibt es oben eine Suchzeile.
 3. **Wann & wo:** Datum (heute ist vorausgefüllt) und Ort. Zuletzt genutzte Orte werden vorgeschlagen. Bei Pauper zusätzlich Casual oder Turnier und die Runde.
 4. **Gegner:**
    - *Commander:* Spieleranzahl wählen und pro Gegner 2–3 Buchstaben des Commanders tippen (z. B. „Kr“ für Krenko …), dann antippen. Die Farben werden übernommen.

@@ -140,7 +140,7 @@ function kacheln(pfad, werte) {
   const viele = werte.length > 9;
   const art = werte.length <= 4 ? 'gross' : viele ? 'kompakt' : 'mittel';
   return (viele ? '<input type="search" data-filter placeholder="Suchen, z. B. 2 Buchstaben" autocomplete="off" aria-label="Deck suchen">' : '')
-    + `<div class="kacheln ${art}">${werte.map(w => wahl(pfad, w)).join('')}</div>`;
+    + `<div class="kacheln ${art}">${werte.map(w => wahl(pfad, w).replace(/>([^<]*)<\/button>$/, '><span>$1</span></button>')).join('')}</div>`;
 }
 
 function gegnerHtml() {
@@ -175,7 +175,7 @@ function pauperHtml() {
 const SCHRITTE = [
   { titel: 'Format', html: () => kacheln('format', ['Commander', 'Pauper']),
     fehlt: () => !spiel.format && 'Bitte Format wählen.' },
-  { titel: 'Mein Deck', html: () => {
+  { titel: 'Mit welchem Deck?', html: () => {
       const d = daten.decks.filter(x => x.Format === spiel.format).sort((a, b) => a.Deckname.localeCompare(b.Deckname, 'de'));
       return d.length ? kacheln('deck', d.map(x => x.Deckname))
         : `<p>Keine ${esc(spiel.format)}-Decks in „Meine Decks“. Trag sie dort ein und lade die Daten in den Einstellungen neu.</p>`;
