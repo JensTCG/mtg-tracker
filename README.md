@@ -29,11 +29,15 @@ Jede Person nutzt die App mit **ihrer eigenen** Google-Tabelle – niemand sieht
 | 📊 **Auswertung** | Passiert in der Google-Tabelle per Formeln – frei anpassbar. |
 | 📱 **Wie eine App** | In Chrome „Zum Startbildschirm hinzufügen“ – mit eigenem Symbol, ohne Browserleiste. |
 
-## Selbst nutzen
+## Selbst nutzen – in 3 Schritten
 
-Du brauchst: ein Google-Konto und ein Android-Handy mit Chrome.
-Wie Podboard funktioniert, wie du es einrichtest und benutzt, steht in der **[Anleitung](ANLEITUNG.md)**.
-Den Link zur leeren Vorlage gibt es auf Anfrage.
+Du brauchst: ein Google-Konto, einen Computer für die Einrichtung und ein Android-Handy mit Chrome. Dauer: ca. 10 Minuten.
+
+1. 📄 **Vorlage kopieren:** **[Hier klicken → „Kopie erstellen“](https://docs.google.com/spreadsheets/d/1dQ6jEafkvwyQY86VSG_QquwGIeghG_Ygh-FYP8b-ubA/copy)**. Die Tabelle liegt dann in deinem eigenen Google Drive und gehört nur dir.
+2. 🔧 **Einrichten:** Decks eintragen, das Script freigeben und den QR-Code erzeugen. Wie das geht, steht Schritt für Schritt in der **[Anleitung](ANLEITUNG.md#einrichten-einmalig-ca-10-minuten)**.
+3. 📱 **Handy verbinden:** den QR-Code mit dem Handy scannen, fertig.
+
+Du musst niemanden fragen und nichts zuschicken lassen: Alles, was du brauchst, ist hier verlinkt.
 
 ## Sicherheit & Datenschutz
 

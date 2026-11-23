@@ -30,7 +30,7 @@ Die App selbst speichert nichts auf einem fremden Server. Sie weiß nur, wo dein
 Du brauchst: ein Google-Konto, einen Computer für die Einrichtung und ein Android-Handy mit Chrome.
 
 ### 1. Vorlage kopieren
-1. Öffne den **Vorlagen-Link**. Er endet auf `/copy` und ist auf Anfrage beim Betreiber dieses Projekts erhältlich.
+1. Öffne den **[Vorlagen-Link](https://docs.google.com/spreadsheets/d/1dQ6jEafkvwyQY86VSG_QquwGIeghG_Ygh-FYP8b-ubA/copy)**. Du musst dafür in deinem Google-Konto angemeldet sein.
 2. Klicke auf **„Kopie erstellen“**. Google weist darauf hin, dass ein Apps Script mitkopiert wird. Das ist richtig so.
 3. Die Kopie gehört jetzt **dir** und liegt in deinem Google Drive. Benenne sie, wie du magst.
 
