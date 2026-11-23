@@ -2,7 +2,7 @@
 
 **Magic-Partien am Handy erfassen – Commander und Pauper – direkt in die eigene Google-Tabelle.**
 
-Ein privates Hobbyprojekt: kostenlos, ohne Play Store, ohne Werbung, ohne Konto bei einem fremden Dienst.
+Ein privates Hobbyprojekt: kostenlos, ohne App Stores, ohne Werbung, ohne Konto bei einem fremden Dienst.
 Jede Person nutzt die App mit **ihrer eigenen** Google-Tabelle – niemand sieht die Spiele der anderen.
 
 ---
