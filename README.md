@@ -32,7 +32,7 @@ Du musst niemanden fragen und dir nichts zuschicken lassen. Alles, was du brauch
 | **Offline** | Spiele werden auf dem Handy gespeichert und automatisch gesendet, sobald wieder Internet da ist. |
 | **Kein Doppeleintrag** | Jedes Spiel hat eine eigene Kennung – auch mehrfaches Senden erzeugt nur eine Zeile. |
 | **Commander-Liste** | Alle Commander (von [Scryfall](https://scryfall.com)) – ergänzt sich jeden Montag automatisch mit neuen Sets. |
-| **Farben** | Farbidentität der Gegner wird mitgespeichert, für Auswertungen „gegen Blau“, „gegen Dreifarbig“ … |
+| **Farben** | Bei Commander wird die Farbidentität der Gegner mitgespeichert, für Auswertungen „gegen Blau“, „gegen Dreifarbig“ … |
 | **Auswertung** | Passiert in der Google-Tabelle per Formeln – frei anpassbar. |
 | **Wie eine App** | Auf den Startbildschirm legen – mit eigenem Symbol, ohne Browserleiste. |
 

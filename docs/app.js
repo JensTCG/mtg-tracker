@@ -4,8 +4,9 @@
 
 // Versionen: 1.0.1 = kleine Korrektur, 1.1 = neue Funktion. Bei jeder neuen Version VERSION erhöhen,
 // in NEUIGKEITEN kurz (für Laien) eintragen, was neu ist. Danach CACHE in sw.js hochzählen.
-const VERSION = '1.0.2';
+const VERSION = '1.0.3';
 const NEUIGKEITEN = {
+  '1.0.3': ['Bei Pauper fragt die App nicht mehr nach den Farben des Gegners.', 'Neue Vorlage 1.1: Im Blatt „Statistik“ gibt es die Gegnerfarben nur noch bei Commander. Wie du das Blatt übernimmst, steht in der Anleitung.'],
   '1.0.2': ['Auf dem iPhone hat Podboard jetzt ein eigenes Symbol auf dem Home-Bildschirm.'],
   '1.0.1': ['Kleine Textkorrektur auf dem Einrichtungsbildschirm.'],
 };
@@ -116,13 +117,12 @@ function zeile(s = spiel) {
   const gemeinsam = {
     Datum: s.datum, Ort: s.ort.trim(), 'Mein Deck': s.deck, Dauer: num(s.dauer), Mulligans: num(s.mull),
     Notizen: s.notizen.trim(),
-    'Gegner-Farben': s.gegner.map(g => g.farben).join(', '),
     'Turnier/Casual': s.art, Runde: s.art === 'Turnier' ? num(s.runde) : '',
     'Erfasst am': s.erfasst, 'Sync-ID': s.syncId,
   };
   if (s.format === 'Commander') {
     const gegner = Object.fromEntries([0, 1, 2, 3, 4].map(i => ['Gegner ' + (i + 1), s.gegner[i]?.deck.trim() || '']));
-    return { ...gemeinsam, Spieleranzahl: num(s.anzahl), ...gegner, Startspieler: s.start, Platzierung: num(s.platz), Gewinner: s.gewinner };
+    return { ...gemeinsam, Spieleranzahl: num(s.anzahl), ...gegner, 'Gegner-Farben': s.gegner.map(g => g.farben).join(', '), Startspieler: s.start, Platzierung: num(s.platz), Gewinner: s.gewinner };
   }
   const { r, ich, geg } = pauperSpiele(), gesp = r.filter(x => x.sieg), gd = s.gegner[0].deck.trim();
   const deckVon = wer => wer === 'Ich' ? s.deck : wer === 'Gegner' ? gd : '';
@@ -145,7 +145,7 @@ function gegnerHtml() {
   return (cmd ? `<p class="klein">Spieler am Tisch (mit dir)</p><div class="raster">${['2', '3', '4', '5', '6'].map(n => wahl('anzahl', n)).join('')}</div>` : '')
     + spiel.gegner.map((g, i) => `<fieldset><legend>Gegner${cmd ? ' ' + (i + 1) : ''}</legend>
       ${feld(`gegner.${i}.deck`, cmd ? 'Commander' : 'Deck / Archetyp', `data-vorschlag="${cmd ? 'commander' : 'pauper'}" autocomplete="off" autocapitalize="words"`)}
-      <div class="farben">${[...'WUBRGC'].map(f => `<button class="farbe f${f}${g.farben.includes(f) ? ' an' : ''}" data-farbe="${i}${f}" aria-label="Farbe ${f}" aria-pressed="${g.farben.includes(f)}">${f}</button>`).join('')}</div>
+      ${cmd ? `<div class="farben">${[...'WUBRGC'].map(f => `<button class="farbe f${f}${g.farben.includes(f) ? ' an' : ''}" data-farbe="${i}${f}" aria-label="Farbe ${f}" aria-pressed="${g.farben.includes(f)}">${f}</button>`).join('')}</div>` : ''}
     </fieldset>`).join('');
 }
 
@@ -357,10 +357,6 @@ document.addEventListener('click', e => {
     setze(p, wert);
     const m = /^gegner\.(\d+)\.deck$/.exec(p);
     if (m && spiel.format === 'Commander' && farbe.has(wert)) spiel.gegner[m[1]].farben = farbe.get(wert);
-    if (m && b.dataset.karte) {
-      kartenFarben(wert).then(f => { spiel.gegner[m[1]].farben = f; render(); })
-        .catch(() => { meldung = 'Farben nicht gefunden – bitte von Hand wählen.'; render(); });
-    }
     return render();
   }
   if (b.dataset.pfad) {
@@ -435,13 +431,6 @@ function vorschlagen(input) {
       if (input.isConnected && input.value === q) zeigeVorschlaege(input, lokal, karten);
     } catch { /* offline oder abgebrochen: lokale Vorschläge reichen */ }
   }, 300);
-}
-
-async function kartenFarben(name) {
-  const r = await fetch('https://api.scryfall.com/cards/named?exact=' + encodeURIComponent(name));
-  const k = await r.json();
-  if (!k.color_identity) throw new Error('Karte nicht gefunden');
-  return ordne(k.color_identity.join('')) || 'C';
 }
 
 document.addEventListener('focusin', e => { if (e.target.dataset?.vorschlag) vorschlagen(e.target); });

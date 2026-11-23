@@ -79,7 +79,7 @@ Fertig. Ab jetzt öffnest du Podboard über das Symbol auf dem Startbildschirm.
 3. **Wann & wo:** Datum (heute ist vorausgefüllt) und Ort. Zuletzt genutzte Orte werden vorgeschlagen. Bei Pauper zusätzlich Casual oder Turnier und die Runde.
 4. **Gegner:**
    - *Commander:* Spieleranzahl wählen und pro Gegner 2–3 Buchstaben des Commanders tippen (z. B. „Kr“ für Krenko …), dann antippen. Die Farben werden übernommen.
-   - *Pauper:* den Deck-Namen tippen. Früher genutzte Namen werden vorgeschlagen, online zusätzlich Karten von Scryfall. Die Farben tippst du selbst an.
+   - *Pauper:* den Deck-Namen tippen. Früher genutzte Namen werden vorgeschlagen, online zusätzlich Karten von Scryfall.
 5. **Ergebnis:**
    - *Commander:* Startspieler, Gewinner, deine Platzierung, deine Mulligans und die Dauer.
    - *Pauper:* pro Spiel, wer angefangen und wer gewonnen hat (Best-of-3), dazu Mulligans und Dauer.
@@ -92,7 +92,7 @@ Gespeicherte Spiele bleiben auf dem Handy, bis die Tabelle sie bestätigt hat. E
 
 ### Auswertung
 - **„Analysen“:** Gesamtbilanz, Siegquoten, Startspieler, Mulligans, je Deck und je Gegner.
-- **„Statistik“:** Siegquote gegen Gegnerfarben, Pauper Turnier gegen Casual, je Deck mit und ohne Startspieler. Oben in **B2** ein Jahr eintragen (z. B. 2027) oder leer lassen für alle Jahre.
+- **„Statistik“:** Siegquote gegen Gegnerfarben (nur Commander), Pauper Turnier gegen Casual, je Deck mit und ohne Startspieler. Oben in **B2** ein Jahr eintragen (z. B. 2027) oder leer lassen für alle Jahre.
 
 ### Updates
 Die App aktualisiert sich beim Öffnen selbst, neu installieren musst du nie. Nach einem Update zeigt sie einmal, was neu ist.
@@ -130,10 +130,19 @@ Für „Analysen“ funktioniert es genauso.
 **Was du selbst holst:** neue oder verbesserte Auswertungsblätter, so wie oben beschrieben.
 **Script-Änderungen** kommen nicht automatisch in deine Kopie. Das ist selten. Falls es einmal nötig ist, steht es unter *Versionen der Vorlage*.
 
+### Script aktualisieren
+Nur nötig, wenn unter *Versionen der Vorlage* steht, dass es ein neues Script gibt.
+1. Auf GitHub die Datei [script/Code.js](https://github.com/JensTCG/podboard/blob/main/script/Code.js) öffnen. Oben rechts über dem Code auf das Symbol **„Copy raw file“** (zwei Blätter) klicken.
+2. In deiner Tabelle auf **Erweiterungen → Apps Script** klicken. Links **Code.gs** anklicken. Im Code-Fenster alles markieren (Strg+A, am Mac Cmd+A), einfügen (Strg+V, am Mac Cmd+V) und mit dem **Disketten-Symbol** speichern.
+3. Oben rechts auf **Bereitstellen → Bereitstellungen verwalten** klicken. Beim Stift-Symbol (Bearbeiten) unter *Version* **„Neue Version“** wählen und auf **Bereitstellen** klicken.
+
+Deine Script-Adresse bleibt dabei gleich. Am Handy musst du nichts neu einrichten.
+
 ### Versionen der Vorlage
 | Version | Datum | Was ist neu |
 |---|---|---|
 | 1.0 | 23.11.2026 | Erste Version: Analysen, Statistik (mit Jahresfilter), CommanderDB mit wöchentlicher Ergänzung |
+| 1.1 | 23.11.2026 | Statistik: Gegnerfarben nur noch bei Commander. Script: Spalten dürfen gelöscht werden, nur „Spiel-ID“ und „Datum“ sind Pflicht. Das neue Script holst du dir wie unter „Script aktualisieren“ beschrieben. |
 
 ## Sicherheit
 
