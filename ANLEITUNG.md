@@ -141,8 +141,7 @@ Deine Script-Adresse bleibt dabei gleich. Am Handy musst du nichts neu einrichte
 ### Versionen der Vorlage
 | Version | Datum | Was ist neu |
 |---|---|---|
-| 1.0 | 23.11.2026 | Erste Version: Analysen, Statistik (mit Jahresfilter), CommanderDB mit wöchentlicher Ergänzung |
-| 1.1 | 23.11.2026 | Statistik: Gegnerfarben nur noch bei Commander. Script: Spalten dürfen gelöscht werden, nur „Spiel-ID“ und „Datum“ sind Pflicht. Das neue Script holst du dir wie unter „Script aktualisieren“ beschrieben. |
+| 1.0 | 23.11.2026 | Erste Version: Analysen, Statistik (mit Jahresfilter, Gegnerfarben bei Commander), CommanderDB mit wöchentlicher Ergänzung |
 
 ## Sicherheit
 

@@ -4,13 +4,8 @@
 
 // Versionen: 1.0.1 = kleine Korrektur, 1.1 = neue Funktion. Bei jeder neuen Version VERSION erhöhen,
 // in NEUIGKEITEN kurz (für Laien) eintragen, was neu ist. Danach CACHE in sw.js hochzählen.
-const VERSION = '1.0.4';
-const NEUIGKEITEN = {
-  '1.0.4': ['Vorschläge für Ort und Pauper-Gegner stehen jetzt alphabetisch.'],
-  '1.0.3': ['Bei Pauper fragt die App nicht mehr nach den Farben des Gegners.', 'Neue Vorlage 1.1: Im Blatt „Statistik“ gibt es die Gegnerfarben nur noch bei Commander. Wie du das Blatt übernimmst, steht in der Anleitung.'],
-  '1.0.2': ['Auf dem iPhone hat Podboard jetzt ein eigenes Symbol auf dem Home-Bildschirm.'],
-  '1.0.1': ['Kleine Textkorrektur auf dem Einrichtungsbildschirm.'],
-};
+const VERSION = '1.0';
+const NEUIGKEITEN = {};
 const $ = q => document.querySelector(q);
 const esc = t => String(t ?? '').replace(/[&<>"']/g, c => '&#' + c.charCodeAt(0) + ';');
 const URL_MUSTER = /^https:\/\/script\.google\.com\/(a\/[^/]+\/)?macros\/s\/[\w-]+\/exec$/;
