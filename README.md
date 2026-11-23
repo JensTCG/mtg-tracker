@@ -49,11 +49,6 @@ Du musst niemanden fragen und dir nichts zuschicken lassen. Alles, was du brauch
 Idee, Anforderungen und Tests stammen von mir – programmiert habe ich Podboard **mit KI-Unterstützung** (Claude von Anthropic).
 Jeder Schritt wurde einzeln getestet. Der komplette Code liegt hier offen zum Nachlesen.
 
-## Technik (für Neugierige)
+## Hinweis
 
-| Ordner | Inhalt |
-|---|---|
-| [`docs/`](docs) | Die App – reines HTML, CSS und JavaScript, ausgeliefert über GitHub Pages |
-| [`script/`](script) | Google Apps Script an der Tabelle: liefert Decks & Commander, hängt Spiele an, prüft den Schlüssel |
-
-<sub>Magic: The Gathering ist eine Marke von Wizards of the Coast. Dieses Projekt ist inoffiziell und steht in keiner Verbindung zu Wizards of the Coast. Kartendaten von Scryfall.</sub>
+Magic: The Gathering ist eine Marke von Wizards of the Coast. Dieses Projekt ist inoffiziell und steht in keiner Verbindung zu Wizards of the Coast. Kartendaten von Scryfall.
