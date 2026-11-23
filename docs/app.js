@@ -4,8 +4,9 @@
 
 // Versionen: 1.0.1 = kleine Korrektur, 1.1 = neue Funktion. Bei jeder neuen Version VERSION erhöhen,
 // in NEUIGKEITEN kurz (für Laien) eintragen, was neu ist. Danach CACHE in sw.js hochzählen.
-const VERSION = '1.0.1';
+const VERSION = '1.0.2';
 const NEUIGKEITEN = {
+  '1.0.2': ['Auf dem iPhone hat Podboard jetzt ein eigenes Symbol auf dem Home-Bildschirm.'],
   '1.0.1': ['Kleine Textkorrektur auf dem Einrichtungsbildschirm.'],
 };
 const $ = q => document.querySelector(q);

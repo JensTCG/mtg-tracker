@@ -27,7 +27,7 @@ Die App selbst speichert nichts auf einem fremden Server. Sie weiß nur, wo dein
 
 ## Einrichten (einmalig, ca. 10 Minuten)
 
-Du brauchst: ein Google-Konto, einen Computer für die Einrichtung und ein Android-Handy mit Chrome.
+Du brauchst: ein Google-Konto, einen Computer für die Einrichtung und ein Smartphone (Android oder iPhone).
 
 ### 1. Vorlage kopieren
 1. Öffne den **[Vorlagen-Link](https://docs.google.com/spreadsheets/d/1dQ6jEafkvwyQY86VSG_QquwGIeghG_Ygh-FYP8b-ubA/copy)**. Du musst dafür in deinem Google-Konto angemeldet sein.
@@ -69,7 +69,9 @@ Im Blatt **„Meine Decks“** trägst du pro Deck eine Zeile ein:
 ### 5. Handy verbinden und installieren
 1. Den QR-Code mit der **Kamera-App** deines Handys scannen und den Link öffnen.
 2. In der App auf **Verbinden** tippen und warten, bis „Verbunden ✓“ erscheint. Das kann bis zu einer Minute dauern.
-3. In Chrome oben rechts auf **⋮** tippen, dann **Zum Startbildschirm hinzufügen** und **Installieren** wählen.
+3. Die App auf den Startbildschirm legen:
+   - *Android (Chrome):* oben rechts auf **⋮** tippen, dann **Zum Startbildschirm hinzufügen** und **Installieren** wählen.
+   - *iPhone (Safari):* unten auf das **Teilen-Symbol** (Quadrat mit Pfeil nach oben) tippen, dann **Zum Home-Bildschirm** und **Hinzufügen** wählen. Den QR-Code dafür mit der Kamera scannen und den Link in Safari öffnen.
 
 Fertig. Ab jetzt öffnest du Podboard über das Symbol auf dem Startbildschirm.
 

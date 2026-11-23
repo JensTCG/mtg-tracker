@@ -9,7 +9,7 @@ Jede Person nutzt die App mit **ihrer eigenen** Google-Tabelle – niemand sieht
 
 ## Selbst nutzen
 
-Du brauchst: ein Google-Konto, einen Computer für die Einrichtung und ein Android-Handy mit Chrome. Dauer: ca. 10 Minuten.
+Du brauchst: ein Google-Konto, einen Computer für die Einrichtung und ein Smartphone (Android oder iPhone). Dauer: ca. 10 Minuten.
 Halte dich an diese Reihenfolge, denn die App funktioniert erst, wenn deine Tabelle fertig ist.
 
 1. **Vorlage kopieren:** [Hier klicken und „Kopie erstellen“ wählen](https://docs.google.com/spreadsheets/d/1dQ6jEafkvwyQY86VSG_QquwGIeghG_Ygh-FYP8b-ubA/copy). Die Tabelle liegt dann in deinem eigenen Google Drive und gehört nur dir.
@@ -38,7 +38,7 @@ Du musst niemanden fragen und dir nichts zuschicken lassen. Alles, was du brauch
 | **Commander-Liste** | Alle Commander (von [Scryfall](https://scryfall.com)) – ergänzt sich jeden Montag automatisch mit neuen Sets. |
 | **Farben** | Farbidentität der Gegner wird mitgespeichert, für Auswertungen „gegen Blau“, „gegen Dreifarbig“ … |
 | **Auswertung** | Passiert in der Google-Tabelle per Formeln – frei anpassbar. |
-| **Wie eine App** | In Chrome „Zum Startbildschirm hinzufügen“ – mit eigenem Symbol, ohne Browserleiste. |
+| **Wie eine App** | Auf den Startbildschirm legen – mit eigenem Symbol, ohne Browserleiste. |
 
 ## Sicherheit & Datenschutz
 
