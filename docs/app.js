@@ -135,6 +135,13 @@ const wahl = (pfad, wert, text = wert) =>
 const feld = (pfad, label, attr = '') =>
   `<label>${label}<input data-pfad="${pfad}" value="${esc(hol(pfad))}" ${attr}></label>`;
 const zahl = 'type="number" inputmode="numeric" min="0"';
+// Quadrate, die mit der Anzahl kleiner werden; ab 10 Stück kompakt mit Suchzeile.
+function kacheln(pfad, werte) {
+  const viele = werte.length > 9;
+  const art = werte.length <= 4 ? 'gross' : viele ? 'kompakt' : 'mittel';
+  return (viele ? '<input type="search" data-filter placeholder="Suchen, z. B. 2 Buchstaben" autocomplete="off" aria-label="Deck suchen">' : '')
+    + `<div class="kacheln ${art}">${werte.map(w => wahl(pfad, w)).join('')}</div>`;
+}
 
 function gegnerHtml() {
   const cmd = spiel.format === 'Commander';
@@ -166,11 +173,11 @@ function pauperHtml() {
 }
 
 const SCHRITTE = [
-  { titel: 'Format', html: () => `<div class="liste">${wahl('format', 'Commander')}${wahl('format', 'Pauper')}</div>`,
+  { titel: 'Format', html: () => kacheln('format', ['Commander', 'Pauper']),
     fehlt: () => !spiel.format && 'Bitte Format wählen.' },
   { titel: 'Mein Deck', html: () => {
       const d = daten.decks.filter(x => x.Format === spiel.format).sort((a, b) => a.Deckname.localeCompare(b.Deckname, 'de'));
-      return d.length ? `<div class="liste">${d.map(x => wahl('deck', x.Deckname)).join('')}</div>`
+      return d.length ? kacheln('deck', d.map(x => x.Deckname))
         : `<p>Keine ${esc(spiel.format)}-Decks in „Meine Decks“. Trag sie dort ein und lade die Daten in den Einstellungen neu.</p>`;
     }, fehlt: () => !spiel.deck && 'Bitte Deck wählen.' },
   { titel: 'Wann & wo', html: () => feld('datum', 'Datum', 'type="date"') + feld('ort', 'Ort / Store', 'data-vorschlag="orte" autocomplete="off"')
@@ -379,6 +386,10 @@ document.addEventListener('input', e => {
   const p = e.target.dataset.pfad;
   if (p) { setze(p, e.target.value); merken(); }
   if (e.target.dataset.vorschlag) vorschlagen(e.target);
+  if (e.target.dataset.filter !== undefined) {
+    const n = norm(e.target.value.trim());
+    e.target.nextElementSibling.querySelectorAll('.wahl').forEach(b => { b.hidden = !norm(b.dataset.wert).includes(n); });
+  }
 });
 
 // Commander gewählt → Farben aus der CommanderDB übernehmen.

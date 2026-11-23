@@ -19,6 +19,13 @@ button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px
 .raster { display: grid; grid-template-columns: repeat(auto-fit, minmax(64px, 1fr)); gap: 8px; }
 .liste { display: grid; gap: 8px; }
 .liste .wahl { text-align: left; }
+.kacheln { display: grid; gap: 8px; margin-top: 8px; }
+.kacheln .wahl { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; hyphens: auto; overflow-wrap: anywhere; }
+.kacheln .wahl[hidden] { display: none; }
+.kacheln.gross { grid-template-columns: repeat(2, 1fr); }
+.kacheln.mittel { grid-template-columns: repeat(3, 1fr); font-size: 16px; }
+.kacheln.kompakt { grid-template-columns: repeat(3, 1fr); font-size: 15px; }
+.kacheln.kompakt .wahl { aspect-ratio: auto; min-height: 76px; }
 .wahl.an { background: var(--akzent); border-color: var(--akzent); color: #fff; }
 label { display: block; margin: 14px 0 6px; color: var(--leise); font-size: 15px; }
 input, textarea { display: block; width: 100%; margin-top: 6px; font: inherit; color: var(--txt); background: var(--fl); border: 1px solid var(--rand); border-radius: 12px; padding: 14px; }
