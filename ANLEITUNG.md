@@ -2,8 +2,6 @@
 
 Diese Anleitung erklärt, wie Podboard funktioniert, wie du es für dich einrichtest und wie du es im Alltag benutzt.
 
----
-
 ## Was steckt dahinter?
 
 Podboard besteht aus drei Teilen:
@@ -22,8 +20,6 @@ So läuft ein Spiel durch:
 4. Die Blätter **„Analysen“** und **„Statistik“** rechnen automatisch neu.
 
 Die App selbst speichert nichts auf einem fremden Server. Sie weiß nur, wo dein Script liegt. Das steht nur auf deinem Handy.
-
----
 
 ## Einrichten (einmalig, ca. 10 Minuten)
 
@@ -75,8 +71,6 @@ Im Blatt **„Meine Decks“** trägst du pro Deck eine Zeile ein:
 
 Fertig. Ab jetzt öffnest du Podboard über das Symbol auf dem Startbildschirm.
 
----
-
 ## Benutzen
 
 ### Ein Spiel eintragen
@@ -102,8 +96,6 @@ Gespeicherte Spiele bleiben auf dem Handy, bis die Tabelle sie bestätigt hat. E
 
 ### Updates
 Die App aktualisiert sich beim Öffnen selbst, neu installieren musst du nie. Nach einem Update zeigt sie einmal, was neu ist.
-
----
 
 ## Anpassen
 
@@ -142,15 +134,11 @@ Für „Analysen“ funktioniert es genauso.
 |---|---|---|
 | 1.0 | 23.11.2026 | Erste Version: Analysen, Statistik (mit Jahresfilter), CommanderDB mit wöchentlicher Ergänzung |
 
----
-
 ## Sicherheit
 
 - **Schlüssel geheim halten.** Wer Script-Adresse *und* Schlüssel kennt, kann Spiele in deine Tabelle eintragen. Den QR-Code also nicht herumzeigen.
 - Jede kopierte Tabelle bekommt automatisch einen **eigenen** Schlüssel.
 - Daten gehen nur an **Google** (deine Tabelle) und an **Scryfall** (Kartendaten).
-
----
 
 ## Wenn etwas hakt
 

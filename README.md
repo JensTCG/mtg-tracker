@@ -5,8 +5,6 @@
 Ein privates Hobbyprojekt: kostenlos, ohne App Stores, ohne Werbung, ohne Konto bei einem fremden Dienst.
 Jede Person nutzt die App mit **ihrer eigenen** Google-Tabelle – niemand sieht die Spiele der anderen.
 
----
-
 ## Selbst nutzen
 
 Du brauchst: ein Google-Konto, einen Computer für die Einrichtung und ein Smartphone (Android oder iPhone). Dauer: ca. 10 Minuten.
@@ -17,8 +15,6 @@ Halte dich an diese Reihenfolge, denn die App funktioniert erst, wenn deine Tabe
 3. **Handy verbinden:** den QR-Code mit dem Handy scannen. Er öffnet die App unter https://jenstcg.github.io/podboard/ und verbindet sie mit deiner Tabelle.
 
 Du musst niemanden fragen und dir nichts zuschicken lassen. Alles, was du brauchst, ist hier verlinkt.
-
----
 
 ## So sieht der Ablauf aus
 
@@ -59,7 +55,5 @@ Jeder Schritt wurde einzeln getestet. Der komplette Code liegt hier offen zum Na
 |---|---|
 | [`docs/`](docs) | Die App – reines HTML, CSS und JavaScript, ausgeliefert über GitHub Pages |
 | [`script/`](script) | Google Apps Script an der Tabelle: liefert Decks & Commander, hängt Spiele an, prüft den Schlüssel |
-
----
 
 <sub>Magic: The Gathering ist eine Marke von Wizards of the Coast. Dieses Projekt ist inoffiziell und steht in keiner Verbindung zu Wizards of the Coast. Kartendaten von Scryfall.</sub>
