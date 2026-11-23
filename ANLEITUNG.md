@@ -115,14 +115,30 @@ Die Tabelle gehört dir, du kannst sie frei erweitern:
 Falsch eingetragene Spiele korrigierst oder löschst du direkt in der Tabelle.
 
 ### Neue Auswertungen aus der Vorlage übernehmen
-Wird die Vorlage verbessert (z. B. ein neues Diagramm oder ein überarbeitetes Blatt „Statistik“), kannst du einzelne Blätter in deine Tabelle holen. Deine Spiele bleiben dabei unberührt:
-1. Den Vorlagen-Link öffnen, **nicht** kopieren.
-2. Unten mit Rechtsklick auf den Reiter des gewünschten Blatts, z. B. „Statistik“, dann **Kopieren nach → Vorhandene Tabelle** wählen und deine Tabelle aussuchen.
-3. In deiner Tabelle erscheint „Kopie von Statistik“. Dein altes Blatt „Statistik“ löschen oder umbenennen und die Kopie in **„Statistik“** umbenennen.
+Die Vorlage wird ab und zu verbessert, zum Beispiel durch ein neues Diagramm oder ein überarbeitetes Blatt „Statistik“. Du kannst einzelne Blätter in deine Tabelle holen, **ohne dass deine Spiele verloren gehen**. Deine Daten stehen nur in „Spiele Commander“, „Spiele Pauper“ und „Meine Decks“, und diese Blätter tauschst du nie aus.
 
-Die Formeln greifen über die Blattnamen auf deine Spiele zu und rechnen sofort mit deinen Daten. Hast du ein Blatt selbst angepasst, übernimm deine Änderungen vorher, denn das neue Blatt ersetzt das alte komplett.
+**Woran du ein Update erkennst**
+- Podboard zeigt nach einem Update kurz „Neu in Version …“. Steht dort etwas zur Vorlage, lohnt sich ein Blick.
+- Oben rechts im Blatt **„Statistik“** (Zelle I1) steht, welche Vorlagen-Version du hast, z. B. „Vorlage 1.0“. Unten unter *Versionen der Vorlage* siehst du, welche Version die neueste ist.
 
-**App-Updates** kommen automatisch. **Script-Updates** (selten) kommen nicht automatisch in deine Kopie. Falls einmal nötig, steht hier, was zu tun ist.
+**So holst du dir ein neues Blatt**
+1. Den Vorlagen-Link öffnen, aber am Ende **`/copy` durch `/edit` ersetzen**. So siehst du die Vorlage nur an und legst keine neue Kopie an.
+2. Unten auf dem gewünschten Blatt-Reiter (z. B. „Statistik“) einen **Rechtsklick** machen und **Kopieren nach → Vorhandene Tabelle** wählen. Dann deine eigene Tabelle aussuchen und auf **Auswählen** klicken.
+3. In deiner Tabelle erscheint jetzt „Kopie von Statistik“. Dein **altes** Blatt „Statistik“ löschen (Rechtsklick → *Löschen*) und die Kopie mit Rechtsklick → *Umbenennen* in **„Statistik“** umbenennen.
+4. Fertig: Die Formeln greifen über die Blattnamen auf deine Spiele zu und rechnen sofort mit deinen Daten.
+
+Für „Analysen“ funktioniert es genauso.
+
+⚠️ Hast du ein Blatt selbst angepasst, ersetzt das neue Blatt deine Änderungen. Benenne dein altes Blatt in dem Fall lieber um (z. B. „Statistik alt“), statt es zu löschen, und übertrag deine Anpassungen danach.
+
+**Was sich von selbst aktualisiert:** die App (bei jedem Öffnen) und die Commander-Liste (jeden Montag).
+**Was du selbst holst:** neue oder verbesserte Auswertungsblätter, so wie oben beschrieben.
+**Script-Änderungen** kommen nicht automatisch in deine Kopie. Das ist selten. Falls es einmal nötig ist, steht es unter *Versionen der Vorlage*.
+
+### Versionen der Vorlage
+| Version | Datum | Was ist neu |
+|---|---|---|
+| 1.0 | 23.11.2026 | Erste Version: Analysen, Statistik (mit Jahresfilter), CommanderDB mit wöchentlicher Ergänzung |
 
 ---
 
