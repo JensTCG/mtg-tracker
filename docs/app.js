@@ -4,8 +4,9 @@
 
 // Versionen: 1.0.1 = kleine Korrektur, 1.1 = neue Funktion. Bei jeder neuen Version VERSION erhöhen,
 // in NEUIGKEITEN kurz (für Laien) eintragen, was neu ist. Danach CACHE in sw.js hochzählen.
-const VERSION = '1.0.3';
+const VERSION = '1.0.4';
 const NEUIGKEITEN = {
+  '1.0.4': ['Vorschläge für Ort und Pauper-Gegner stehen jetzt alphabetisch.'],
   '1.0.3': ['Bei Pauper fragt die App nicht mehr nach den Farben des Gegners.', 'Neue Vorlage 1.1: Im Blatt „Statistik“ gibt es die Gegnerfarben nur noch bei Commander. Wie du das Blatt übernimmst, steht in der Anleitung.'],
   '1.0.2': ['Auf dem iPhone hat Podboard jetzt ein eigenes Symbol auf dem Home-Bildschirm.'],
   '1.0.1': ['Kleine Textkorrektur auf dem Einrichtungsbildschirm.'],
@@ -403,10 +404,12 @@ function lokaleTreffer(quelle, q) {
   const liste = quelle === 'commander' ? daten.commander.map(c => c[0]) : quelle === 'orte' ? daten.orte : daten.pauperGegner;
   const n = norm(q.trim());
   if (quelle === 'commander' && n.length < 2) return [];
-  if (!n) return liste.slice(0, 5);
+  // Orte und Pauper-Gegner: die zuletzt genutzten auswählen, dann alphabetisch anzeigen.
+  const abc = a => quelle === 'commander' ? a : [...a].sort((x, y) => x.localeCompare(y, 'de'));
+  if (!n) return abc(liste.slice(0, 5));
   const vorne = liste.filter(x => norm(x).startsWith(n));
   const mitte = liste.filter(x => !norm(x).startsWith(n) && norm(x).includes(n));
-  return [...vorne, ...mitte].filter(x => norm(x) !== n).slice(0, 8);
+  return abc([...vorne, ...mitte].filter(x => norm(x) !== n).slice(0, 8));
 }
 
 function zeigeVorschlaege(input, werte, karten = []) {
