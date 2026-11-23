@@ -1,0 +1,9 @@
+node_modules/
+.clasprc.json
+.clasp.json
+script/.clasp.json
+script/deployment-id.txt
+.claude/
+.DS_Store
+CLAUDE.md
+UPDATE-NOTIZEN.md
