@@ -46,7 +46,7 @@ Du musst niemanden fragen und dir nichts zuschicken lassen. Alles, was du brauch
 
 ## Wie die App entstanden ist
 
-Idee, Anforderungen und Tests stammen von mir – programmiert habe ich Podboard **mit KI-Unterstützung** (Claude von Anthropic).
+Idee, Anforderungen und Tests stammen von mir. Programmierung und Anpassungen wurden **mit KI-Unterstützung** (Claude von Anthropic) erledigt.
 Jeder Schritt wurde einzeln getestet. Der komplette Code liegt hier offen zum Nachlesen.
 
 ## Hinweis
