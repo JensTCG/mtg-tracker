@@ -85,6 +85,11 @@ const ordne = s => [...'WUBRGC'].filter(x => s.includes(x)).join('');
 // ---------- Spiel-Entwurf ----------
 const heute = () => { const d = new Date(); return new Date(d - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10); };
 const leererGegner = () => ({ deck: '', farben: '' });
+// Ein angefangenes Spiel kann tagelang liegen: Hat der Nutzer das Datum nicht selbst gewählt, gilt immer heute.
+function datumAktualisieren() {
+  if (!spiel || spiel.datumGewaehlt || spiel.datum === heute()) return false;
+  spiel.datum = heute(); merken(); return true;
+}
 
 function neuesSpiel() {
   spiel = {
@@ -397,7 +402,7 @@ document.addEventListener('click', e => {
 
 document.addEventListener('input', e => {
   const p = e.target.dataset.pfad;
-  if (p) { setze(p, e.target.value); merken(); }
+  if (p) { setze(p, e.target.value); if (p === 'datum') spiel.datumGewaehlt = true; merken(); }
   if (e.target.dataset.vorschlag) vorschlagen(e.target);
   if (e.target.dataset.filter !== undefined) {
     const n = norm(e.target.value.trim());
@@ -470,11 +475,14 @@ if (letzteVersion !== VERSION && (letzteVersion || cfg) && NEUIGKEITEN[VERSION])
 localStorage.setItem('version', JSON.stringify(VERSION));
 if (daten) listen();
 if (cfg && daten && !spiel) neuesSpiel();
+datumAktualisieren();
 formatAusLink();
 render();
 // Im Hintergrund aktualisieren (offline bleibt der alte Stand); nicht neu zeichnen, sonst springt der Fokus beim Tippen.
 if (cfg) laden().catch(() => {});
 warteschlange().then(l => { wartend = l.length; zeigeSync(); sync(); });
 addEventListener('online', sync);
+// App lag im Hintergrund (z. B. über Nacht): beim Zurückholen das Datum auf heute setzen.
+document.addEventListener('visibilitychange', () => { if (!document.hidden && datumAktualisieren()) render(); });
 setInterval(() => { if (wartend) sync(); }, 60000);
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
