@@ -30,7 +30,20 @@ function ausLink() {
   return true;
 }
 ausLink();
-addEventListener('hashchange', () => { if (ausLink()) render(); }); // falls die App schon offen war
+addEventListener('hashchange', () => { if (ausLink() || formatAusLink()) render(); }); // falls die App schon offen war
+
+// Link vom Dashboard der Tabelle: …/#format=Commander springt gleich zur Deckwahl. Ein angefangenes Spiel bleibt erhalten.
+function formatAusLink() {
+  const f = new URLSearchParams(location.hash.slice(1)).get('format');
+  if (!['Commander', 'Pauper'].includes(f)) return false;
+  history.replaceState(null, '', location.pathname);
+  if (!cfg || !daten || ansicht !== 'spiel' || (spiel && schritt > 0)) return false;
+  if (!spiel) neuesSpiel();
+  spiel.format = f;
+  if (f === 'Commander') spiel.art = 'Casual';
+  gegnerAnpassen(); schritt = 1;
+  return true;
+}
 
 // ---------- Verbindung zum Script ----------
 // Google liefert die Antwort ab und zu nicht aus (hängt ohne Daten): kurzes Zeitlimit, dann neu versuchen.
@@ -124,7 +137,7 @@ function zeile(s = spiel) {
   const deckVon = wer => wer === 'Ich' ? s.deck : wer === 'Gegner' ? gd : '';
   return {
     ...gemeinsam, Gegner: gd, Startspieler: deckVon(gesp[0]?.start), 'Anzahl Spiele': gesp.length,
-    Gewinner: ich > geg ? s.deck : ich < geg ? gd : '', Ergebnis: ich + ':' + geg,
+    Gewinner: ich > geg ? s.deck : ich < geg ? gd : 'Draw', Ergebnis: ich + ':' + geg, // „Draw“ ausdrücklich: so erkennt die Tabelle es auch ohne Spalte „Ergebnis“
     'Startspieler je Spiel': gesp.map(x => x.start || '?').join(', '),
   };
 }
@@ -457,6 +470,7 @@ if (letzteVersion !== VERSION && (letzteVersion || cfg) && NEUIGKEITEN[VERSION])
 localStorage.setItem('version', JSON.stringify(VERSION));
 if (daten) listen();
 if (cfg && daten && !spiel) neuesSpiel();
+formatAusLink();
 render();
 // Im Hintergrund aktualisieren (offline bleibt der alte Stand); nicht neu zeichnen, sonst springt der Fokus beim Tippen.
 if (cfg) laden().catch(() => {});

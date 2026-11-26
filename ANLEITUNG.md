@@ -17,7 +17,7 @@ So läuft ein Spiel durch:
 1. Du trägst es in der **App** ein. Es wird sofort auf dem Handy gespeichert.
 2. Die App schickt es an **dein Script**, zusammen mit deinem geheimen Schlüssel.
 3. Das Script prüft den Schlüssel und hängt das Spiel als neue Zeile an **deine Tabelle** an.
-4. Die Blätter **„Analysen“** und **„Statistik“** rechnen automatisch neu.
+4. Die Auswertungen (**„Dashboard“**, **„Statistik Commander“**, **„Statistik Pauper“**) rechnen automatisch neu.
 
 Die App selbst speichert nichts auf einem fremden Server. Sie weiß nur, wo dein Script liegt. Das steht nur auf deinem Handy.
 
@@ -82,7 +82,7 @@ Fertig. Ab jetzt öffnest du Podboard über das Symbol auf dem Startbildschirm.
    - *Pauper:* den Deck-Namen tippen. Früher genutzte Namen werden vorgeschlagen, online zusätzlich Karten von Scryfall.
 5. **Ergebnis:**
    - *Commander:* Startspieler, Gewinner, deine Platzierung, deine Mulligans und die Dauer.
-   - *Pauper:* pro Spiel, wer angefangen und wer gewonnen hat (Best-of-3), dazu Mulligans und Dauer.
+   - *Pauper:* pro Spiel, wer angefangen und wer gewonnen hat (Best-of-3), dazu Mulligans und Dauer. Steht es am Ende unentschieden (z. B. 1:1), speichert die App „Draw“ als Gewinner.
 6. **Notizen:** eintragen, wenn du willst, dann auf **Speichern** tippen.
 
 Mit **„Neu“** oben rechts verwirfst du eine angefangene Eingabe. Schließt du die App mitten in der Eingabe, bleibt der Stand erhalten.
@@ -91,8 +91,15 @@ Mit **„Neu“** oben rechts verwirfst du eine angefangene Eingabe. Schließt d
 Gespeicherte Spiele bleiben auf dem Handy, bis die Tabelle sie bestätigt hat. Ein **gelber Balken** zeigt, wie viele Spiele warten. Die App sendet automatisch, sobald wieder Internet da ist. Mit **„Jetzt synchronisieren“** kannst du nachhelfen. Ein Spiel wird dabei nie doppelt eingetragen.
 
 ### Auswertung
-- **„Analysen“:** Gesamtbilanz, Siegquoten, Startspieler, Mulligans, je Deck und je Gegner.
-- **„Statistik“:** Siegquote gegen Gegnerfarben (nur Commander), Pauper Turnier gegen Casual, je Deck mit und ohne Startspieler. Oben in **B2** ein Jahr eintragen (z. B. 2027) oder leer lassen für alle Jahre.
+- **„Dashboard“** (erstes Blatt): das Wichtigste auf einen Blick, links Commander, rechts Pauper. Oben bei **„Jahr“** wählst du ein Jahr oder „Alle“. Das gilt auch für die Blätter „Statistik Commander“ und „Statistik Pauper“.
+- Knöpfe im Dashboard:
+  - **„Am Rechner eintragen“** springt in „Spiele Commander“ bzw. „Spiele Pauper“, direkt in die erste freie Zeile.
+  - **„Mit der App eintragen“** öffnet Podboard gleich im richtigen Format. Gedacht für unterwegs aus der Google-Tabellen-App.
+  - **„Mehr zu …“** öffnet das Blatt „Statistik Commander“ bzw. „Statistik Pauper“.
+- **„Statistik Commander“** und **„Statistik Pauper“:** alle Zahlen im Detail: Übersicht, je Deck, je Gegner, Gegnerfarben (Commander) und Turnier/Casual (Pauper). Zurück geht es unten über den Blatt-Reiter „Dashboard“.
+- **Draws bei Pauper:** Ein Match zählt als Unentschieden, wenn bei „Gewinner“ „Draw“ steht oder das Feld leer ist. Draws stehen extra in der Übersicht und im Dashboard. Bei „Letzte 5“ steht dafür ein **D**.
+- **Top 5 der Gegner:** Oben rechts neben „Mindestanzahl …“ stellst du ein, wie oft du gegen einen Gegner gespielt haben musst, damit er in der Top 5 auftaucht.
+- Diese drei Blätter finden die Spalten über ihre Überschrift. Gelöschte Spalten führen dort also nicht zu Fehlern, die passende Zahl bleibt nur leer.
 
 ### Updates
 Die App aktualisiert sich beim Öffnen selbst, neu installieren musst du nie. Nach einem Update zeigt sie einmal, was neu ist.
@@ -100,31 +107,31 @@ Die App aktualisiert sich beim Öffnen selbst, neu installieren musst du nie. Na
 ## Anpassen
 
 Die Tabelle gehört dir, du kannst sie frei erweitern:
-- **Frei änderbar:** „Analysen“ und „Statistik“ umbauen, eigene Blätter, Formeln und Diagramme anlegen, Farben und Formatierung ändern.
+- **Frei änderbar:** „Dashboard“, „Statistik Commander“ und „Statistik Pauper“ umbauen, eigene Blätter, Formeln und Diagramme anlegen, Farben und Formatierung ändern. Listen, die nach unten wachsen (z. B. alle Gegner), brauchen darunter freien Platz. Schreibst du dort etwas hinein, zeigt die Liste #REF! statt Zahlen.
 - **Bitte so lassen**, sonst findet die App ihre Daten nicht mehr:
   - die Blattnamen **„Spiele Commander“**, **„Spiele Pauper“**, **„Meine Decks“** und **„CommanderDB“**,
   - die **Spaltenüberschriften** in diesen vier Blättern. Neue Spalten ganz rechts anhängen ist okay.
 - **Spalten löschen** geht in „Spiele Commander“ und „Spiele Pauper“ auch. Nur **„Spiel-ID“** und **„Datum“** müssen bleiben. Was die App für eine gelöschte Spalte erfasst, wird dann nicht gespeichert. Auswertungen, die diese Spalte brauchen, zeigen danach nichts mehr an.
 - Tipp: Vor größeren Umbauten über *Datei → Kopie erstellen* eine Sicherung anlegen. Über *Datei → Versionsverlauf* kommst du an ältere Stände zurück.
 
-Falsch eingetragene Spiele korrigierst oder löschst du direkt in der Tabelle.
+Falsch eingetragene Spiele korrigierst oder löschst du direkt in der Tabelle. Trägst du ein Spiel von Hand ein, bekommt die neue Zeile ihre Spiel-ID automatisch, sobald du etwas hineinschreibst (z. B. das Datum).
 
 ### Neue Auswertungen aus der Vorlage übernehmen
-Die Vorlage wird ab und zu verbessert, zum Beispiel durch ein neues Diagramm oder ein überarbeitetes Blatt „Statistik“. Du kannst einzelne Blätter in deine Tabelle holen, **ohne dass deine Spiele verloren gehen**. Deine Daten stehen nur in „Spiele Commander“, „Spiele Pauper“ und „Meine Decks“. Diese Blätter tauschst du nie aus.
+Die Vorlage wird ab und zu verbessert, zum Beispiel durch ein neues Diagramm oder ein überarbeitetes Blatt „Statistik Pauper“. Du kannst einzelne Blätter in deine Tabelle holen, **ohne dass deine Spiele verloren gehen**. Deine Daten stehen nur in „Spiele Commander“, „Spiele Pauper“ und „Meine Decks“. Diese Blätter tauschst du nie aus.
 
 **Woran du ein Update erkennst**
 - Podboard zeigt nach einem Update kurz „Neu in Version …“. Steht dort etwas zur Vorlage, lohnt sich ein Blick.
-- Oben rechts im Blatt **„Statistik“** (Zelle I1) steht, welche Vorlagen-Version du hast, z. B. „Vorlage 1.0“. Unten unter *Versionen der Vorlage* siehst du, welche Version die neueste ist.
+- Oben rechts im **„Dashboard“** (Zelle E1) steht, welche Vorlagen-Version du hast, z. B. „Vorlage 1.0“. Unten unter *Versionen der Vorlage* siehst du, welche Version die neueste ist.
 
 **So holst du dir ein neues Blatt**
 1. Den Vorlagen-Link öffnen, aber am Ende **`/copy` durch `/edit` ersetzen**. So siehst du die Vorlage nur an und legst keine neue Kopie an.
-2. Unten auf dem gewünschten Blatt-Reiter (z. B. „Statistik“) einen **Rechtsklick** machen und **Kopieren nach → Vorhandene Tabelle** wählen. Dann deine eigene Tabelle aussuchen und auf **Auswählen** klicken.
-3. In deiner Tabelle erscheint jetzt „Kopie von Statistik“. Dein **altes** Blatt „Statistik“ löschen (Rechtsklick → *Löschen*) und die Kopie mit Rechtsklick → *Umbenennen* in **„Statistik“** umbenennen.
+2. Unten auf dem gewünschten Blatt-Reiter (z. B. „Statistik Pauper“) einen **Rechtsklick** machen und **Kopieren nach → Vorhandene Tabelle** wählen. Dann deine eigene Tabelle aussuchen und auf **Auswählen** klicken.
+3. In deiner Tabelle erscheint jetzt „Kopie von Statistik Pauper“. Dein **altes** Blatt „Statistik Pauper“ löschen (Rechtsklick → *Löschen*) und die Kopie mit Rechtsklick → *Umbenennen* in **„Statistik Pauper“** umbenennen.
 4. Fertig: Die Formeln greifen über die Blattnamen auf deine Spiele zu und rechnen sofort mit deinen Daten.
 
-Für „Analysen“ funktioniert es genauso.
+Bei „Dashboard“, „Statistik Commander“ und „Statistik Pauper“ holst du am besten alle drei zusammen. Die Knöpfe im Dashboard springen in einer neuen Kopie der ganzen Vorlage sicher an die richtige Stelle. Holst du die Blätter einzeln in eine ältere Tabelle, kann es sein, dass die Sprung-Knöpfe nicht mehr treffen. Die Zahlen stimmen trotzdem.
 
-**Achtung:** Hast du ein Blatt selbst angepasst, ersetzt das neue Blatt deine Änderungen. Benenne dein altes Blatt in dem Fall lieber um (z. B. „Statistik alt“), statt es zu löschen. Übertrag deine Anpassungen danach.
+**Achtung:** Hast du ein Blatt selbst angepasst, ersetzt das neue Blatt deine Änderungen. Benenne dein altes Blatt in dem Fall lieber um (z. B. „Statistik Pauper alt“), statt es zu löschen. Übertrag deine Anpassungen danach.
 
 **Was sich von selbst aktualisiert:** die App (bei jedem Öffnen) und die Commander-Liste (jeden Montag).
 **Was du selbst holst:** neue oder verbesserte Auswertungsblätter, so wie oben beschrieben.
@@ -141,7 +148,7 @@ Deine Script-Adresse bleibt dabei gleich. Am Handy musst du nichts neu einrichte
 ### Versionen der Vorlage
 | Version | Datum | Was ist neu |
 |---|---|---|
-| 1.0 | 23.11.2026 | Erste Version: Analysen, Statistik (mit Jahresfilter, Gegnerfarben bei Commander), CommanderDB mit wöchentlicher Ergänzung |
+| 1.0 | 23.11.2026 | Erste Version: Dashboard mit Knöpfen und Jahr-Auswahl, Statistik Commander (mit Gegnerfarben), Statistik Pauper (mit Draws, Turnier/Casual), automatische Spiel-ID beim Eintragen von Hand, CommanderDB mit wöchentlicher Ergänzung |
 
 ## Sicherheit
 

@@ -33,7 +33,7 @@ Du musst niemanden fragen und dir nichts zuschicken lassen. Alles, was du brauch
 | **Kein Doppeleintrag** | Jedes Spiel hat eine eigene Kennung – auch mehrfaches Senden erzeugt nur eine Zeile. |
 | **Commander-Liste** | Alle Commander (von [Scryfall](https://scryfall.com)) – ergänzt sich jeden Montag automatisch mit neuen Sets. |
 | **Farben** | Bei Commander wird die Farbidentität der Gegner mitgespeichert, für Auswertungen „gegen Blau“, „gegen Dreifarbig“ … |
-| **Auswertung** | Passiert in der Google-Tabelle per Formeln – frei anpassbar. |
+| **Auswertung** | In der Google-Tabelle per Formeln: ein Dashboard mit den wichtigsten Zahlen und Knöpfen, dazu je ein Statistik-Blatt für Commander und Pauper. Frei anpassbar. |
 | **Wie eine App** | Auf den Startbildschirm legen – mit eigenem Symbol, ohne Browserleiste. |
 
 ## Sicherheit & Datenschutz

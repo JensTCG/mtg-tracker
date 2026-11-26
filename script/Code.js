@@ -13,6 +13,22 @@ function onOpen() {
     .addToUi();
 }
 
+// Von Hand eingetragene Spiele: Sobald in einer Zeile ohne Spiel-ID etwas steht, bekommt sie die nächste freie Nummer.
+function onEdit(e) {
+  const blatt = e.range.getSheet();
+  if (!Object.values(FORMATE).includes(blatt.getName()) || e.range.getLastRow() < 2) return;
+  const breite = blatt.getLastColumn();
+  const sp = blatt.getRange(1, 1, 1, breite).getValues()[0].map(String).indexOf('Spiel-ID') + 1;
+  if (!sp) return;
+  const n = blatt.getLastRow();
+  const ids = blatt.getRange(2, sp, n - 1).getValues().flat();
+  let max = Math.max(0, ...ids.map(Number).filter(isFinite));
+  for (let r = Math.max(2, e.range.getRow()); r <= Math.min(n, e.range.getLastRow()); r++) {
+    if (ids[r - 2] !== '') continue;
+    if (blatt.getRange(r, 1, 1, breite).getValues()[0].some(v => v !== '')) blatt.getRange(r, sp).setValue(++max);
+  }
+}
+
 // ---------- CommanderDB automatisch ergänzen ----------
 // Holt alle Commander von Scryfall und hängt nur neue (unbekannte Oracle-ID) unten an; bestehende Zeilen bleiben unberührt.
 function commanderAktualisieren() {
