@@ -135,10 +135,10 @@ const wahl = (pfad, wert, text = wert) =>
 const feld = (pfad, label, attr = '') =>
   `<label>${label}<input data-pfad="${pfad}" value="${esc(hol(pfad))}" ${attr}></label>`;
 const zahl = 'type="number" inputmode="numeric" min="0"';
-// Quadrate, die mit der Anzahl kleiner werden; ab 10 Stück kompakt mit Suchzeile.
+// Quadrate: bis 2 Stück zwei pro Reihe, ab 3 Stück drei pro Reihe; ab 10 Stück kompakt mit Suchzeile.
 function kacheln(pfad, werte) {
   const viele = werte.length > 9;
-  const art = werte.length <= 4 ? 'gross' : viele ? 'kompakt' : 'mittel';
+  const art = werte.length <= 2 ? 'gross' : viele ? 'kompakt' : 'mittel';
   return (viele ? '<input type="search" data-filter placeholder="Suchen, z. B. 2 Buchstaben" autocomplete="off" aria-label="Deck suchen">' : '')
     + `<div class="kacheln ${art}">${werte.map(w => wahl(pfad, w).replace(/>([^<]*)<\/button>$/, '><span>$1</span></button>')).join('')}</div>`;
 }
