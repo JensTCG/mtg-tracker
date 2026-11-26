@@ -85,7 +85,7 @@ Fertig. Ab jetzt öffnest du Podboard über das Symbol auf dem Startbildschirm.
    - *Pauper:* pro Spiel, wer angefangen und wer gewonnen hat (Best-of-3), dazu Mulligans und Dauer. Steht es am Ende unentschieden (z. B. 1:1), speichert die App „Draw“ als Gewinner.
 6. **Notizen:** eintragen, wenn du willst, dann auf **Speichern** tippen.
 
-Mit **„Neu“** oben rechts verwirfst du eine angefangene Eingabe. Schließt du die App mitten in der Eingabe, bleibt der Stand erhalten.
+Mit **„Neu“** oben rechts verwirfst du eine angefangene Eingabe. Wechselst du kurz in eine andere App, bleibt der Stand erhalten. Schließt du Podboard ganz, startet die App beim nächsten Öffnen wieder leer bei der Formatauswahl.
 
 ### Ohne Internet
 Gespeicherte Spiele bleiben auf dem Handy, bis die Tabelle sie bestätigt hat. Ein **gelber Balken** zeigt, wie viele Spiele warten. Die App sendet automatisch, sobald wieder Internet da ist. Mit **„Jetzt synchronisieren“** kannst du nachhelfen. Ein Spiel wird dabei nie doppelt eingetragen.

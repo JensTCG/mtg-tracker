@@ -474,8 +474,8 @@ if (letzteVersion !== VERSION && (letzteVersion || cfg) && NEUIGKEITEN[VERSION])
 }
 localStorage.setItem('version', JSON.stringify(VERSION));
 if (daten) listen();
-if (cfg && daten && !spiel) neuesSpiel();
-datumAktualisieren();
+// Frisch geöffnet (App war ganz geschlossen): immer leer bei der Formatauswahl starten. Im Hintergrund bleibt der Stand erhalten.
+if (cfg && daten) neuesSpiel();
 formatAusLink();
 render();
 // Im Hintergrund aktualisieren (offline bleibt der alte Stand); nicht neu zeichnen, sonst springt der Fokus beim Tippen.
