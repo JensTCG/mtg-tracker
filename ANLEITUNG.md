@@ -51,16 +51,17 @@ Im Blatt **„Meine Decks“** trägst du pro Deck eine Zeile ein:
    - *Zugriff:* **Jeder**
 5. Auf **Bereitstellen** klicken, dann auf **Zugriff autorisieren** und dein Google-Konto wählen.
 6. **Achtung:** Google zeigt jetzt **„Google hat diese App nicht überprüft“**. Das ist normal: Das Script ist deine eigene Kopie und läuft nur in deinem Konto.
-   Klicke auf **„Erweitert“**, dann auf **„Zu Podboard wechseln (unsicher)“** und zum Schluss auf **„Alles Zulassen“**, sodass alle Kästchen mit einem Haken versehen sind.
-7. Es erscheint die **Web-App-URL**, sie endet auf `/exec`. Klicke auf **Kopieren**.
+   Klicke auf **„Erweitert“**, dann auf **„Zu Podboard wechseln (unsicher)“**.
+7. **Wichtig:** Google fragt jetzt „Select what Podboard can access“ (auf Deutsch: „Auswählen, worauf Podboard zugreifen darf“) und zeigt vier Punkte mit leeren Kästchen. Setze ganz oben das Häkchen bei **„Select all“ / „Alle auswählen“**, damit alle vier Kästchen angehakt sind. Klicke dann unten auf **„Continue“ / „Weiter“**. Fehlt ein Häkchen, funktioniert Podboard nicht.
+8. Es erscheint die **Web-App-URL** (endet auf `/exec`). Die brauchst du nicht zu kopieren. Klicke auf **Fertig**.
 
 > **Was darf das Script?** Nur diese eine Tabelle bearbeiten, Kartendaten bei Scryfall abrufen und einmal pro Woche die Commander-Liste ergänzen. Auf andere Dateien, Mails oder Kontakte hat es keinen Zugriff.
 
 ### 4. Verbindung herstellen
 1. Zurück zum Tab mit deiner Tabelle und die Seite **neu laden**.
 2. Oben im Menü erscheint **„Podboard“**, das kann ein paar Sekunden dauern. Dort auf **Einrichten / Verbindung anzeigen** klicken.
-3. Beim ersten Mal die **Web-App-URL einfügen** und auf **Speichern** klicken.
-4. Jetzt siehst du einen **QR-Code**. Dein persönlicher Schlüssel wurde dabei automatisch erzeugt. Ab jetzt ergänzt sich auch die Commander-Liste jeden Montag von selbst.
+3. Es erscheint das Fenster **„Podboard – Verbindung“** mit einem **QR-Code**. Dein persönlicher Schlüssel wurde dabei automatisch erzeugt. Ab jetzt ergänzt sich auch die Commander-Liste jeden Montag von selbst.
+4. Siehst du stattdessen ein Feld „Füge hier die Web-App-URL ein“: In Apps Script unter *Bereitstellen → Bereitstellungen verwalten* die Web-App-URL kopieren, dort einfügen und auf **Speichern** klicken.
 
 ### 5. Handy verbinden und installieren
 1. Den QR-Code mit der **Kamera-App** deines Handys scannen und den Link öffnen.

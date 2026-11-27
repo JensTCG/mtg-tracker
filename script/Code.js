@@ -109,6 +109,9 @@ const APP_URL = 'https://jenstcg.github.io/podboard/';
 function einrichten() {
   woechentlichEinrichten_(); // auch in jeder Kopie: Commander-Liste hält sich selbst aktuell
   const p = eigenschaften_();
+  // Web-App schon bereitgestellt? Dann kennt Google die /exec-Adresse und niemand muss sie kopieren.
+  const auto = ScriptApp.getService().getUrl();
+  if (!p.getProperty('URL') && URL_MUSTER.test(auto || '')) p.setProperty('URL', auto);
   const d = JSON.stringify({ url: p.getProperty('URL') || '', key: p.getProperty('KEY'), app: APP_URL }).replace(/</g, '\\u003c');
   const box = 'style="width:100%;font:13px monospace;box-sizing:border-box"';
   // Der QR-Code öffnet die App mit Adresse + Schlüssel im #-Teil; der wird nie an einen Server geschickt.
