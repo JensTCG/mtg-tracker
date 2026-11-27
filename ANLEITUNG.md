@@ -51,7 +51,7 @@ Im Blatt **„Meine Decks“** trägst du pro Deck eine Zeile ein:
    - *Zugriff:* **Jeder**
 5. Auf **Bereitstellen** klicken, dann auf **Zugriff autorisieren** und dein Google-Konto wählen.
 6. **Achtung:** Google zeigt jetzt **„Google hat diese App nicht überprüft“**. Das ist normal: Das Script ist deine eigene Kopie und läuft nur in deinem Konto.
-   Klicke auf **„Erweitert“**, dann auf **„Zu Podboard wechseln (unsicher)“** und zum Schluss auf **„Zulassen“**.
+   Klicke auf **„Erweitert“**, dann auf **„Zu Podboard wechseln (unsicher)“** und zum Schluss auf **„Alles Zulassen“**, sodass alle Kästchen mit einem Haken versehen sind.
 7. Es erscheint die **Web-App-URL**, sie endet auf `/exec`. Klicke auf **Kopieren**.
 
 > **Was darf das Script?** Nur diese eine Tabelle bearbeiten, Kartendaten bei Scryfall abrufen und einmal pro Woche die Commander-Liste ergänzen. Auf andere Dateien, Mails oder Kontakte hat es keinen Zugriff.
